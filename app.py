@@ -1,7 +1,7 @@
 from langchain.chat_models import init_chat_model
 import os
 os.environ['GOOGLE_API_KEY']="AIzaSyCCGiY1Mpa5QrYOiSDEHqf3ETG_zyIEdEM"
-model=init_chat_model("google-genai:gemini-2.5-flash-lite")
+model = init_chat_model("gemini-2.5-flash-lite",model_provider="google_genai")
 promptA="Suggest me a unique name for my cat"
 promptB="give me one creative name for a white kitten"
 responseA=model.invoke(promptA).content
